@@ -4,28 +4,18 @@ import argparse
 
 def main():
   parser = argparse.ArgumentParser()
-  parser.add_argument("text", type=str, default="apple")
+  parser.add_argument("subject", type=str, default="apple")
   args= parser.parse_args()
-  TEXT = args.text
+  SUBJECT = args.subject
 
-  MY_PROMPT = f"""Convert text into emoji.
-
-Back to the Future: 👴🚗🕒 
-Batman: 🦇🤵 
-Transformers: 🚗🤖 
-Star Wars: ⭐️⚔
-{TEXT}: """
+  MY_PROMPT = f"""Create an outline for an essay or story about {SUBJECT} as Markdown unordered List in Japanese:"""
 
   openai.api_key = os.getenv("OPENAI_API_KEY")
 
   response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=1, max_tokens=2048)
 
-  # print(response)
-
-  print("")
-
   for choice in response["choices"]:
-      print(TEXT, choice["text"])
+      print(choice["text"])
 
 
 main()
