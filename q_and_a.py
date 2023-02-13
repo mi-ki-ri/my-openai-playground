@@ -2,6 +2,14 @@ import os
 import openai
 import argparse
 
+"""
+Usage:
+
+- in "~/.zshrc"
+  - export OPENAI_API_KEY
+  - alias "qa" "python {FULLPATH}.py"
+"""
+
 def main():
   parser = argparse.ArgumentParser()
   parser.add_argument("text", type=str, default="apple")
