@@ -16,28 +16,19 @@ def main():
   args= parser.parse_args()
   TEXT = args.text
 
-  MY_PROMPT = f"""I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer, in Japanese. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with "Unknown".
+  MY_PROMPT = f"""日本語で答えるQ&Aボットがほしい。答えが不明な場合「不明」と答えてほしい。
 
-  Q: What is human life expectancy in the United States?
-  A: Human life expectancy in the United States is 78 years.
+  Q: 富士山の高さは？
+  A: 3,776メートルです
 
-  Q: Who was president of the United States in 1955?
-  A: Dwight D. Eisenhower was president of the United States in 1955.
+  Q: 日本の人口は？
+  A: 1.257億(2021年当時)
 
-  Q: Which party did he belong to?
-  A: He belonged to the Republican Party.
+  Q: バナナの平方根は？
+  A: 不明
 
-  Q: What is the square root of banana?
-  A: Unknown
-
-  Q: How does a telescope work?
-  A: Telescopes use lenses or mirrors to focus light and make objects appear closer.
-
-  Q: Where were the 1992 Olympics held?
-  A: The 1992 Olympics were held in Barcelona, Spain.
-
-  Q: How many squigs are in a bonk?
-  A: Unknown
+  Q: ビートルズの代表的なアルバム
+  A: "Abbey Road", "Rubber Soul", "White Album"
 
   Q: {TEXT}
   A: """
