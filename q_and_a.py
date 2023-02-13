@@ -12,7 +12,7 @@ Usage:
 
 def main():
   parser = argparse.ArgumentParser()
-  parser.add_argument("text", type=str, default="apple")
+  parser.add_argument("text", type=str, default="")
   args= parser.parse_args()
   TEXT = args.text
 
@@ -46,12 +46,7 @@ def main():
 
   response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.5, max_tokens=512)
 
-  # print(response)
-
-  # print("Q:", TEXT)
-
   for choice in response["choices"]:
-      # print("A:", choice["text"])
       print(choice["text"])
 
 main()
