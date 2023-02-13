@@ -8,7 +8,7 @@ def main():
   args= parser.parse_args()
   TEXT = args.text
 
-  MY_PROMPT = f"""次のテキストを理解できる限りの言語(5カ国語〜10カ国語)に翻訳してほしい。訳語には読み(発音)もつけてほしい。
+  MY_PROMPT = f"""次のテキストを理解できる限りの言語(10カ国語〜20カ国語)に翻訳してほしい。その中に日本語、英語、ドイツ語、中国語、ラテン語、ロシア語は入れておいてほしい。訳語には読み(発音)もつけてほしい。
 
 例:
 テキスト: 炎
@@ -24,7 +24,7 @@ def main():
 
   openai.api_key = os.getenv("OPENAI_API_KEY")
 
-  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.8, max_tokens=512)
+  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.8, max_tokens=1024)
 
   # print(response)
 
