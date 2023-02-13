@@ -25,7 +25,7 @@ Search Query: """
 
   openai.api_key = os.getenv("OPENAI_API_KEY")
 
-  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.5, max_tokens=256)
+  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.33, max_tokens=256)
 
   # print(response)
 
