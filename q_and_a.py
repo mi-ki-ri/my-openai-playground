@@ -49,4 +49,5 @@ def main():
   for choice in response["choices"]:
       print(choice["text"])
 
-main()
+if __name__ == '__main__':
+  main()
