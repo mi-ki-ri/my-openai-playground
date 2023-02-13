@@ -36,4 +36,7 @@ Search Query: """
       URL=  f"http://pasokatu.com/nsearch#gsc.tab=0&gsc.q={ urllib.parse.quote(choice['text'])}&gsc.sort="
       webbrowser.open(url=URL, new=2)
 
+      URL2 = f"https://www.perplexity.ai/?q={ urllib.parse.quote(choice['text'] + 'について日本語で答えてください。')}"
+      webbrowser.open(url=URL2, new=2)
+
 main()
