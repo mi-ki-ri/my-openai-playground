@@ -44,13 +44,14 @@ def main():
 
   openai.api_key = os.getenv("OPENAI_API_KEY")
 
-  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=1, max_tokens=256)
+  response = openai.Completion.create(model="text-davinci-003", prompt=MY_PROMPT, temperature=0.5, max_tokens=512)
 
   # print(response)
 
-  print("Q:", TEXT)
+  # print("Q:", TEXT)
 
   for choice in response["choices"]:
-      print("A:", choice["text"])
+      # print("A:", choice["text"])
+      print(choice["text"])
 
 main()
