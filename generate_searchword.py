@@ -4,6 +4,14 @@ import openai
 import webbrowser
 import urllib.parse
 
+"""
+Usage:
+
+- in "~/.zshrc"
+  - export OPENAI_API_KEY
+  - alias "nsearch" "python {FULLPATH}.py"
+"""
+
 def main():
   parser = argparse.ArgumentParser()
   parser.add_argument("q", type=str, default="apple")
