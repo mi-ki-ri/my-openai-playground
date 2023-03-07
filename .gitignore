@@ -1,2 +1,4 @@
 .envrc
 venv
+dist/*.*
+src/*.*
